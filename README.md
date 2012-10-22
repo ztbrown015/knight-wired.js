@@ -172,12 +172,12 @@ define({
 });
 ```
 
-Although this wiring specification is expressed in JSON instead of XML, it's not hard to see how it aligns with the Spring 
+Although this wiring specification is expressed as Javascript object literals instead of XML, it's not hard to see how it aligns with the Spring 
 XML configuration. There are a few small differences, such as defining the message as an individual item to be wired into 
 the quest (which isn't necessary, but does demonstrate a nice feature in wire.js). The gist of the wiring specification,
 however, is the same.
 
-One interesting piece of this JSON wiring specification is in the creation of the quest. The quest is created by constructing
+One interesting piece of this wiring specification is in the creation of the quest. The quest is created by constructing
 the "dragon-quest" module and injecting it (via constructor-injection) with two values: A DOM element and a message. The
 message given is simply a reference to the previously defined message near the top of the specification. The DOM element is
 specified using the DOM plugin where "dom!message" references the element whose ID is "message" in the DOM. By injecting the
