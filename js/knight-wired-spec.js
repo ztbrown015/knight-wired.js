@@ -15,7 +15,7 @@ define({
 	quest: {
 	  create: {
 	    module: 'dragon-quest',
-	    args: [{ $ref: 'dom!message'}, {$ref: 'message'}]
+	    args: [{ $ref: 'dom!knightApp'}, {$ref: 'message'}]
 	  }
 	},
 	

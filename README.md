@@ -160,7 +160,7 @@ define({
 	quest: {
 	  create: {
 	    module: 'dragon-quest',
-	    args: [{ $ref: 'dom!message'}, {$ref: 'message'}]
+	    args: [{ $ref: 'dom!knightApp'}, {$ref: 'message'}]
 	  }
 	},
 	
@@ -180,6 +180,6 @@ however, is the same.
 One interesting piece of this wiring specification is in the creation of the quest. The quest is created by constructing
 the "dragon-quest" module and injecting it (via constructor-injection) with two values: A DOM element and a message. The
 message given is simply a reference to the previously defined message near the top of the specification. The DOM element is
-specified using the DOM plugin where "dom!message" references the element whose ID is "message" in the DOM. By injecting the
+specified using the DOM plugin where "dom!knightApp" references the element whose ID is "knightApp" in the DOM. By injecting the
 element in this way, the quest itself remains decoupled from the actual element where the message will be rendered.
 
