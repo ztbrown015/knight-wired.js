@@ -13,6 +13,20 @@ define(function() {
 			var k = new knight(quest)
         	k.embarkOnQuest();
         	assert.calledOnce(quest.embark);
+		},
+		'should throw exception if quest is undefined': function(){
+			//call knight constructor without passing in a quest
+			var k = new knight()
+			
+			this.spy(k, "embarkOnQuest");
+			//Expect to throw TypeError
+			try{
+				k.embarkOnQuest();	
+			}
+			catch(e){
+			}
+
+			assert.threw(k.embarkOnQuest, 'TypeError')
 		}
 	});
 

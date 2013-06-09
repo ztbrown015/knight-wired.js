@@ -7,11 +7,14 @@ define(function() {
 	quest = require('../../js/dragon-quest');
 
 	buster.testCase('js/dragon-quest', {
-		'method embark should set the innerHTML of message node to supplied message': function() {
-			var messageNode = {}
-			var message = "this is the message"
+
+		'should set the innerHTML of message node to supplied message': function() {
+			var message, messageNode;
+
+			messageNode = {};
+			message = "this is the message";
 			
-			var q = new quest(messageNode, message)
+			var q = new quest(messageNode, message);
         	q.embark();
         	assert.equals(messageNode.innerHTML, message);
 		}
