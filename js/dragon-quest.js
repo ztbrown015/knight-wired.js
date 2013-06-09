@@ -1,4 +1,5 @@
-define([], function() {
+(function(define) {
+define(function() {
 	
 	function SlayDragonQuest(messageNode, message) {
     this._messageNode = messageNode;
@@ -14,3 +15,5 @@ define([], function() {
 	return SlayDragonQuest;
 
 });
+//necessary for buster unit tests where 'define' is undefined 
+}(typeof define === 'function' && define.amd ? define : function(factory) { module.exports = factory(require); }));
